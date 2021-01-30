@@ -78,9 +78,7 @@ func MainNetParams() *Params {
 		Net:         wire.MainNet,
 		DefaultPort: "9108",
 		DNSSeeds: []DNSSeed{
-			{"mainnet-seed.decred.mindcry.org", true},
-			{"mainnet-seed.decred.netpurgatory.com", true},
-			{"mainnet-seed.decred.org", true},
+			{"192.168.1.143", true},
 		},
 
 		// Chain parameters
@@ -90,7 +88,7 @@ func MainNetParams() *Params {
 		PowLimitBits:             0x1d00ffff,
 		ReduceMinDifficulty:      false,
 		MinDiffReductionTime:     0, // Does not apply since ReduceMinDifficulty false
-		GenerateSupported:        false,
+		GenerateSupported:        true,
 		MaximumBlockSizes:        []int{393216},
 		MaxTxSize:                393216,
 		TargetTimePerBlock:       time.Minute * 5,
@@ -416,11 +414,7 @@ func MainNetParams() *Params {
 		TreasuryVoteRequiredDivisor:    5,
 
 		seeders: []string{
-			"mainnet-seed-1.decred.org",
-			"mainnet-seed-2.decred.org",
-			"mainnet-seed.planetdecred.org",
-			"mainnet-seed.dcrdata.org",
-			"mainnet-seed.jholdstock.uk",
+			"192.168.1.143",
 		},
 	}
 }
